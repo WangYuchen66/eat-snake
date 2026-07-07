@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贪吃蛇</title>
+    <link rel="icon" type="image/svg+xml" href="assets/snake-mark.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="game-area" aria-label="贪吃蛇游戏">
+        <header class="topbar">
+          <div class="brand">
+            <img src="assets/snake-mark.svg" alt="" class="brand-mark" />
+            <div>
+              <h1>贪吃蛇</h1>
+              <p id="statusText" aria-live="polite">准备开始</p>
+            </div>
+          </div>
+
+          <div class="stats" aria-label="游戏数据">
+            <div class="stat">
+              <span>分数</span>
+              <strong id="scoreValue">0</strong>
+            </div>
+            <div class="stat">
+              <span>最高</span>
+              <strong id="bestValue">0</strong>
+            </div>
+            <div class="stat">
+              <span>等级</span>
+              <strong id="levelValue">1</strong>
+            </div>
+          </div>
+        </header>
+
+        <div class="board-wrap">
+          <canvas id="gameCanvas" width="720" height="720" aria-label="游戏棋盘"></canvas>
+          <div id="overlay" class="overlay">
+            <h2>准备好了</h2>
+            <p>按开始进入棋盘</p>
+          </div>
+        </div>
+
+        <footer class="controls">
+          <div class="control-row">
+            <button id="startButton" class="button primary" type="button">开始</button>
+            <button id="pauseButton" class="button" type="button" disabled>暂停</button>
+            <button id="resetButton" class="button ghost" type="button">重开</button>
+          </div>
+
+          <div class="settings" aria-label="游戏设置">
+            <label class="select-field">
+              <span>难度</span>
+              <select id="difficultySelect">
+                <option value="easy">轻松</option>
+                <option value="classic" selected>经典</option>
+                <option value="hard">挑战</option>
+              </select>
+            </label>
+
+            <label class="toggle-field">
+              <input id="soundToggle" type="checkbox" checked />
+              <span>音效</span>
+            </label>
+          </div>
+
+          <div class="pad" aria-label="方向控制">
+            <button class="pad-button up" type="button" data-direction="up" aria-label="上">↑</button>
+            <button class="pad-button left" type="button" data-direction="left" aria-label="左">←</button>
+            <button class="pad-button right" type="button" data-direction="right" aria-label="右">→</button>
+            <button class="pad-button down" type="button" data-direction="down" aria-label="下">↓</button>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

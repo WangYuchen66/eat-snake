@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="snake mark">
+  <rect width="96" height="96" rx="20" fill="#eef6e7"/>
+  <path d="M26 61c0-15 13-27 29-27h11c7 0 13 6 13 13s-6 13-13 13H49c-6 0-10 4-10 9 0 6 5 10 11 10h18" fill="none" stroke="#2f8f4e" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="66" cy="47" r="3.2" fill="#243027"/>
+  <circle cx="78" cy="47" r="3.2" fill="#243027"/>
+  <circle cx="24" cy="29" r="10" fill="#e34f3f"/>
+  <path d="M29 21c4-5 9-6 14-4-4 4-8 6-14 4z" fill="#2f8f4e"/>
+</svg>
